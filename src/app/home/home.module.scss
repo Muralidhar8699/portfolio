@@ -1,0 +1,20 @@
+@import "../styles/mixins.scss";
+@import "../styles/colors.scss";
+.child_cont {
+  width: 100%;
+  @include flexBox(column, center, center);
+  .nav_cont {
+    width: 90%;
+    @include flexBox(row, center, center);
+    position: sticky;
+    height: 10rem;
+    top: -5%;
+  }
+  .content_cont {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 2rem;
+    @include flexBox(row, center, center);
+    height: 65rem;
+  }
+}

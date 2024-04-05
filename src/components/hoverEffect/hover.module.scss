@@ -1,0 +1,43 @@
+@import "../../app/styles/mixins.scss";
+@import "../../app/styles/colors.scss";
+.main_container {
+  @include flexBox(row, center, center);
+  .link {
+    @include flexBox(row, center, center);
+    position: relative;
+    display: block;
+  }
+}
+
+.card_maindiv {
+  @include flexBox(row, center, center);
+  padding: 1rem;
+  width: 10rem;
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  .card_subdiv {
+    position: relative;
+    z-index: 50;
+  }
+}
+
+.cardtitle {
+  font-weight: 800;
+  transition: 0.3s ease all;
+}
+.active_span {
+  position: absolute;
+  inset: 0;
+  background-color: #f6e3b3;
+  border-radius: 1.5rem;
+  z-index: -1;
+}
+.current_active_span {
+  position: absolute;
+  inset: 0;
+  background-color: $yellow;
+  border-radius: 1.5rem;
+  z-index: 5;
+}

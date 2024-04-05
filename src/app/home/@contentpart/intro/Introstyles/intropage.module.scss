@@ -1,0 +1,95 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/mixins.scss";
+
+.Intro_cont {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 25px;
+  height: 60rem;
+  .grid1,
+  .grid2,
+  .grid3,
+  .grid4,
+  .grid5,
+  .grid6,
+  .grid7,
+  .grid8,
+  .grid9,
+  .grid10 {
+    border-radius: 1rem;
+    @include flexBox(row, center, center);
+  }
+  .grid1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 6;
+    grid-column-end: 4;
+  }
+  .grid2 {
+    grid-row-start: 1;
+    grid-column-start: 10;
+
+    grid-row-end: 2;
+    grid-column-end: 13;
+  }
+  .grid3 {
+    grid-row-start: 6;
+    grid-column-start: 1;
+
+    grid-row-end: 9;
+    grid-column-end: 4;
+  }
+  .grid4 {
+    grid-row-start: 9;
+    grid-column-start: 1;
+
+    grid-row-end: 12;
+    grid-column-end: 7;
+  }
+  .grid5 {
+    grid-row-start: 9;
+    grid-column-start: 7;
+
+    grid-row-end: 12;
+    grid-column-end: 10;
+  }
+  .grid6 {
+    grid-row-start: 8;
+    grid-column-start: 10;
+
+    grid-row-end: 12;
+    grid-column-end: 13;
+  }
+  .grid7 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+
+    grid-row-end: 4;
+    grid-column-end: 7;
+  }
+  .grid8 {
+    grid-row-start: 1;
+    grid-column-start: 7;
+
+    grid-row-end: 4;
+    grid-column-end: 10;
+  }
+  .grid9 {
+    grid-row-start: 2;
+    grid-column-start: 10;
+
+    grid-row-end: 8;
+    grid-column-end: 13;
+  }
+  .grid10 {
+    grid-row-start: 4;
+    grid-column-start: 4;
+
+    grid-row-end: 9;
+    grid-column-end: 10;
+  }
+}
