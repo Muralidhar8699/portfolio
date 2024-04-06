@@ -7,4 +7,16 @@
   @include flexBox(row, center, center);
   border: 0.1px solid rgb(129, 129, 129);
   border-radius: 1rem;
+  padding: 0 1rem;
+  .sub_div {
+    @include flexBox(row, center, center);
+    gap: 1rem;
+    .text {
+      @include regularFont(1.4rem);
+    }
+    .img {
+      width: 2rem;
+      color: $yellow;
+    }
+  }
 }

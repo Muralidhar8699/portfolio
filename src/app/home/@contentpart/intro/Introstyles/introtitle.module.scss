@@ -4,7 +4,28 @@
 .title_div {
   width: 100%;
   height: 100%;
-  @include flexBox(row, center, center);
+  @include flexBox(column, start, center);
   border: 0.1px solid rgb(129, 129, 129);
   border-radius: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  .title {
+    @include semiBoldFont(1.5rem);
+    margin-left: 1rem;
+  }
+  .mern {
+    @include boldFont(2.2rem);
+    margin-left: 1rem;
+    transition: 0.5s;
+  }
+  .fswd {
+    @include boldFont(1.8rem);
+    color: rgb(154, 152, 152);
+    margin-left: 3rem;
+  }
+}
+.title_div:hover .mern {
+  color: $yellow;
+  transition: 0.5s;
 }
