@@ -3,6 +3,8 @@
 .child_cont {
   width: 100%;
   @include flexBox(column, center, center);
+  // background-color: rgb(226, 225, 225);
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   .nav_cont {
     width: 90%;
     @include flexBox(row, center, center);
