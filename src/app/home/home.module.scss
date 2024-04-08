@@ -12,11 +12,11 @@
     width: 90%;
     @include flexBox(row, center, center);
     position: sticky;
-    height: 10rem;
-    top: -5%;
+    height: 8rem;
+    top: -3%;
   }
   .content_cont {
-    width: 91%;
+    width: 90%;
     padding: 1rem;
     border-radius: 2rem;
     @include flexBox(row, center, center);

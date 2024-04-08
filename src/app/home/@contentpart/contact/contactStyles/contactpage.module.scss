@@ -3,6 +3,37 @@
 
 .contact_cont {
   width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 25px;
   height: 60rem;
-  border: 1px solid;
+  .first_div,
+  .second_div,
+  .third_div {
+    border-radius: 1rem;
+    @include flexBox(row, center, center);
+  }
+  .first_div {
+    grid-row-start: 9;
+    grid-column-start: 1;
+
+    grid-row-end: 11;
+    grid-column-end: 13;
+  }
+  .second_div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 9;
+    grid-column-end: 5;
+  }
+  .third_div {
+    grid-row-start: 1;
+    grid-column-start: 5;
+
+    grid-row-end: 9;
+    grid-column-end: 13;
+  }
 }

@@ -8,7 +8,7 @@
   border-radius: 1rem;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    background-color: white;
+  background-color: white;
   padding: 1rem;
   gap: 1rem;
   cursor: pointer;
@@ -16,18 +16,55 @@
     @include semiBoldFont(1.5rem);
     margin-left: 1rem;
   }
-  .mern {
-    @include boldFont(2.2rem);
-    margin-left: 1rem;
-    transition: 0.5s;
-  }
   .fswd {
     @include boldFont(1.8rem);
     color: rgb(154, 152, 152);
     margin-left: 3rem;
   }
 }
-.title_div:hover .mern {
-  color: $yellow;
-  transition: 0.5s;
+.svg text {
+  @include boldFont(2.5rem);
+  letter-spacing: 0.2rem;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
+.title_div:hover .svg text {
+  animation: stroke 7s infinite alternate;
+  stroke-width: 4;
+  stroke: #fec401;
+  font-size: 40px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fec401;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fec401;
+  }
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fec401;
+    stroke-width: 3;
+  }
+  100% {
+    fill: #fec401;
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 5;
+  }
+}
+
+.wrapper {
+  background-color: white;
+  width: 18rem;
+  height: 5rem;
 }

@@ -6,10 +6,10 @@
   height: 100%;
   @include flexBox(column, center, center);
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  background-color: white;
   border-radius: 1rem;
   padding: 1rem;
   gap: 2rem;
-  background-color: white;
   .first_div {
     @include flexBox(row, center, space-evenly);
     width: 100%;
