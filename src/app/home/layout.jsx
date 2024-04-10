@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
-import styles from "./home.module.scss"
+import styles from "./home.module.scss";
 
-export default function HomeLayout({ children,contentpart,navbar }) {
+export default function HomeLayout({ children, contentpart, navbar }) {
   return (
     <div className={styles.child_cont}>
       {children}

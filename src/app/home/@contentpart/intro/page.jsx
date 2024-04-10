@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./Introstyles/intropage.module.scss";
 import Introprofile from "./components/introprofile";
@@ -9,20 +10,64 @@ import IntroAbout from "./components/introabout";
 import IntroServices from "./components/introservices";
 import IntroScroll from "./components/introscroll";
 import IntroResume from "./components/introresume";
+import { motion } from "framer-motion";
+
+const IntroVariants = {
+  hidden: {
+    opacity: 0,
+    // x: "-100vw",
+  },
+  visible: {
+    opacity: 1,
+    // x: 0,
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
+      when: "beforeChildren",
+      staggerChildren: 0.4,
+    },
+  },
+};
+const childrenVariants = {
+  hidden: { opacity: 0, height: "1%" },
+  visible: {
+    height: "100%",
+    opacity: 1,
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
+      duration: 0.5,
+    },
+  },
+};
 
 export default function IntroPage() {
   return (
-    <div className={styles.Intro_cont}>
-      <div className={styles.grid1}>
+    <motion.div
+      variants={IntroVariants}
+      initial="hidden"
+      animate="visible"
+      className={styles.Intro_cont}
+    >
+      <motion.div
+        variants={childrenVariants}
+        drag
+        dragTransition={{
+          power: 0.9,
+        }}
+        className={styles.grid1}
+      >
         <Introprofile />
-      </div>
-      <div className={styles.grid2}>
+      </motion.div>
+      <motion.div variants={childrenVariants} className={styles.grid2}>
         <IntroScroll />
-      </div>
+      </motion.div>
       <div className={styles.grid3}>3</div>
-      <div className={styles.grid4}>
+      <motion.div variants={childrenVariants} className={styles.grid4}>
         <IntroSkills />
-      </div>
+      </motion.div>
       <div className={styles.grid5}>
         <IntroWorkWith />
       </div>
@@ -35,12 +80,23 @@ export default function IntroPage() {
       <div className={styles.grid8}>
         <IntroAbout />
       </div>
-      <div className={styles.grid9}>
+      <motion.div
+        drag
+        dragTransition={{
+          power: 0.9,
+        }}
+        className={styles.grid9}
+      >
         <IntroResume />
-      </div>
-      <div className={styles.grid10}>
+      </motion.div>
+      <motion.div
+        variants={childrenVariants}
+        // initial={{ height: "1%" }}
+        // animate={{ height: "100%" }}
+        className={styles.grid10}
+      >
         <IntroServices />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
