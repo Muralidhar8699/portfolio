@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Introstyles/intropage.module.scss";
 import Introprofile from "./components/introprofile";
 import IntroTitle from "./components/title";
@@ -10,20 +10,21 @@ import IntroAbout from "./components/introabout";
 import IntroServices from "./components/introservices";
 import IntroScroll from "./components/introscroll";
 import IntroResume from "./components/introresume";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const IntroVariants = {
   hidden: {
     opacity: 0,
-    // x: "-100vw",
+    width: "10%",
   },
   visible: {
     opacity: 1,
-    // x: 0,
+    width: "100%",
+    pathLength: 1,
     transition: {
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
+      delay: 0.3,
+      duration: 0.9,
+      type: "tween",
       when: "beforeChildren",
       staggerChildren: 0.4,
     },
@@ -35,15 +36,15 @@ const childrenVariants = {
     height: "100%",
     opacity: 1,
     transition: {
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
-      duration: 0.5,
+      type: "tween",
+      duration: 0.8,
     },
   },
 };
 
 export default function IntroPage() {
+  const container = useRef(null);
+  const isInView = useInView(container, { once: true });
   return (
     <motion.div
       variants={IntroVariants}
@@ -55,7 +56,7 @@ export default function IntroPage() {
         variants={childrenVariants}
         drag
         dragTransition={{
-          power: 0.9,
+          power: 0.2,
         }}
         className={styles.grid1}
       >
@@ -65,36 +66,49 @@ export default function IntroPage() {
         <IntroScroll />
       </motion.div>
       <div className={styles.grid3}>3</div>
-      <motion.div variants={childrenVariants} className={styles.grid4}>
+      <div
+        ref={container}
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className={styles.grid4}
+      >
         <IntroSkills />
-      </motion.div>
-      <div className={styles.grid5}>
+      </div>
+      <div
+        ref={container}
+        style={{
+          transform: isInView ? "none" : "translateX(-400px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+        }}
+        className={styles.grid5}
+      >
         <IntroWorkWith />
       </div>
       <div className={styles.grid6}>
         <IntroLatestwork />
       </div>
-      <div className={styles.grid7}>
+      <motion.div variants={childrenVariants} className={styles.grid7}>
         <IntroTitle />
-      </div>
+      </motion.div>
       <div className={styles.grid8}>
         <IntroAbout />
       </div>
       <motion.div
         drag
         dragTransition={{
-          power: 0.9,
+          min: 0,
+          max: 0,
+          bounceStiffness: 800,
         }}
         className={styles.grid9}
       >
         <IntroResume />
       </motion.div>
-      <motion.div
-        variants={childrenVariants}
-        // initial={{ height: "1%" }}
-        // animate={{ height: "100%" }}
-        className={styles.grid10}
-      >
+      <motion.div variants={childrenVariants} className={styles.grid10}>
         <IntroServices />
       </motion.div>
     </motion.div>
