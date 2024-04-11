@@ -15,7 +15,7 @@ export default function SelectionPage() {
         return (
           <motion.button
             onClick={() => {
-              router.push(`/projects/${project.path}`);
+              router.push(`/home/projects/${project.path}`);
               setActive(project._id);
             }}
             key={project._id}
@@ -23,7 +23,7 @@ export default function SelectionPage() {
           >
             {active === project._id && (
               <motion.div
-                layoutId="clickedbutton"
+                layoutId="clickedbtn"
                 transition={{
                   type: "spring",
                   stiffness: "100",

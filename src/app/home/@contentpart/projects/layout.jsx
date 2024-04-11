@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./projectStyle.module.scss";
+import styles from "./projects.module.scss";
 
 export default function Projectslayout({ children, content, selection }) {
   return (

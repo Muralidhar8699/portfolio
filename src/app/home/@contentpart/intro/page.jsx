@@ -15,29 +15,30 @@ import { motion, useInView } from "framer-motion";
 const IntroVariants = {
   hidden: {
     opacity: 0,
-    width: "10%",
+    scale: 2,
   },
   visible: {
     opacity: 1,
-    width: "100%",
-    pathLength: 1,
+    scale: [1.9, 1.7, 1.5, 1],
     transition: {
-      delay: 0.3,
-      duration: 0.9,
-      type: "tween",
+      type: "spring",
+      damping: 9,
+      mass: 1,
       when: "beforeChildren",
-      staggerChildren: 0.4,
+      duration: 1,
+      staggerChildren: 0.05,
     },
   },
 };
 const childrenVariants = {
-  hidden: { opacity: 0, height: "1%" },
+  hidden: { opacity: 0, scale: 2 },
   visible: {
-    height: "100%",
+    scale: [1.9, 1.7, 1.5, 1],
     opacity: 1,
     transition: {
-      type: "tween",
-      duration: 0.8,
+      type: "spring",
+      stiffness: 100,
+      damping: 8,
     },
   },
 };
@@ -69,9 +70,9 @@ export default function IntroPage() {
       <div
         ref={container}
         style={{
-          transform: isInView ? "none" : "translateX(-200px)",
+          transform: isInView ? "none" : "translateX(-100px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: " 0.8s",
         }}
         className={styles.grid4}
       >
@@ -80,9 +81,9 @@ export default function IntroPage() {
       <div
         ref={container}
         style={{
-          transform: isInView ? "none" : "translateX(-400px)",
+          transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+          transition: "1s",
         }}
         className={styles.grid5}
       >

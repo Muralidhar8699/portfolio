@@ -1,31 +1,74 @@
+"use client";
 import React from "react";
 import styles from "../Introstyles/introabout.module.scss";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { IoMailOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+const parentVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 1,
+      delay: 2,
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-10vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 8,
+    },
+  },
+};
 export default function IntroAbout() {
   return (
     <div className={styles.about_cont}>
-      <div className={styles.first_div}>
-        <div className={styles.linkedin_div}>
+      <motion.div
+        variants={parentVariant}
+        initial="hidden"
+        animate="visible"
+        className={styles.first_div}
+      >
+        <motion.div variants={childVariants} className={styles.linkedin_div}>
           <img
             src="https://softivuspro.com/wp/bentox/wp-content/themes/bentoxlight/assets/images/global/social-hover.png"
             alt="logo"
             className={styles.img1}
           />
           <SlSocialLinkedin className={styles.linkedin_logo} />
-        </div>
-        <div className={styles.mail_div}>
+        </motion.div>
+        <motion.div variants={childVariants} className={styles.mail_div}>
           <img
             src="https://softivuspro.com/wp/bentox/wp-content/themes/bentoxlight/assets/images/global/social-hover.png"
             alt="logo"
             className={styles.img2}
           />
           <IoMailOutline className={styles.email_logo} />
-        </div>
-      </div>
-      <div className={styles.second_div}>
-        <p className={styles.text}>Profile</p>
-        <span>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        variants={parentVariant}
+        initial="hidden"
+        animate="visible"
+        className={styles.second_div}
+      >
+        <motion.p variants={childVariants} className={styles.text}>
+          Profile
+        </motion.p>
+        <motion.span variants={childVariants}>
           <svg
             width="48"
             height="35"
@@ -44,8 +87,8 @@ export default function IntroAbout() {
               className={styles.logo}
             ></path>
           </svg>
-        </span>
-      </div>
+        </motion.span>
+      </motion.div>
     </div>
   );
 }
