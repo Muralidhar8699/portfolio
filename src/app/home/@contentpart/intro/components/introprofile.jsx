@@ -5,7 +5,7 @@ import styles from '../Introstyles/introprofile.module.scss'
 export default function Introprofile() {
   return (
     <div className={styles.profile_div}>
-      1
+      111111
     </div>
   )
 }
