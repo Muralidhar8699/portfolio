@@ -7,15 +7,15 @@ export default function Introprofile() {
     <div className={styles.profile_div}>
       <div className={styles.first_div}>
         <div className={styles.circle} />
-        <Image
+        <img
           className={styles.image}
           src="https://cdn-icons-png.flaticon.com/512/3532/3532814.png"
           alt="logo"
         />
       </div>
       <button className={styles.btn}>
-        I'm Muralidhar
-        {/* <FiSend className={styles.icon} /> */}
+        I &apos m Muralidhar
+        <FiSend className={styles.icon} />
       </button>
       <div className={styles.second_div}>
         <p className={styles.text}>Bio</p>
