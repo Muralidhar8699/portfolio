@@ -36,6 +36,7 @@ const childrenVariants = {
     scale: [1.9, 1.7, 1.5, 1],
     opacity: 1,
     transition: {
+      delay: 0.2,
       type: "spring",
       stiffness: 100,
       damping: 8,

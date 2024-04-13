@@ -4,8 +4,63 @@
 .profile_div {
   width: 100%;
   height: 100%;
-  @include flexBox(row, center, center);
+  @include flexBox(column, center, center);
   border-radius: 1rem;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   background-color: white;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  .first_div {
+    @include flexBox(column, center, center);
+    width: 100%;
+    height: 80%;
+    background-color: $yellow;
+    border-radius: 1rem;
+    position: relative;
+    .circle {
+      width: 13rem;
+      height: 13rem;
+      background-color: white;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .image {
+      width: 14rem;
+      position: absolute;
+      top: 5%;
+    }
+  }
+  .btn {
+    height: 10%;
+    border: 0;
+    @include flexBox(row, center, center);
+    @include semiBoldFont(1.2rem);
+    background-color: $yellow;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    cursor: pointer;
+    .icon {
+      font-size: 1.3rem;
+      opacity: 0;
+      transform: translatex(-20px);
+      transition: 0.5s;
+    }
+  }
+  .btn:hover .icon {
+    display: block;
+    opacity: 1;
+    transform: translatex(0);
+    transition: 0.5s;
+  }
+  .second_div {
+    @include flexBox(row, center, space-between);
+    width: 100%;
+    height: 10%;
+    cursor: pointer;
+    .text {
+      @include semiBoldFont(1.3rem);
+    }
+  }
 }
