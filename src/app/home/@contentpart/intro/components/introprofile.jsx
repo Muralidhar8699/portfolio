@@ -15,7 +15,7 @@ export default function Introprofile() {
       </div>
       <button className={styles.btn}>
         I'm Muralidhar
-       <FiSend className={styles.icon} />
+       {/* <FiSend className={styles.icon} /> */}
       </button>
       <div className={styles.second_div}>
         <p className={styles.text}>Bio</p>
