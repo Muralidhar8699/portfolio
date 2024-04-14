@@ -67,7 +67,6 @@ export default function IntroPage() {
       <motion.div variants={childrenVariants} className={styles.grid2}>
         <IntroScroll />
       </motion.div>
-      <div className={styles.grid3}>3</div>
       <div
         ref={container}
         style={{

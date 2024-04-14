@@ -1,0 +1,23 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+.main_container {
+  @include flexBox(row, center, center);
+  height: 48rem;
+  width: 90%;
+  padding: 0.5rem;
+  position: absolute;
+  top: 12%;
+  gap: 1rem;
+  
+  .selection_div {
+    @include flexBox(column, center, center);
+    height: 100%;
+    width: 12%;
+  }
+  .content_div {
+    @include flexBox(column, center, center);
+    height: 100%;
+    width: 88%;
+    padding: 2rem;
+  }
+}

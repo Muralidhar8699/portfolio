@@ -14,7 +14,7 @@ const PathData = [
   },
   {
     title: "Projects",
-    path: "/home/projects",
+    path: "/home/projects/ogami",
   },
   {
     title: "Contact",
