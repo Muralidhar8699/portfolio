@@ -1,27 +1,15 @@
 import React from "react";
-import styles from "../Introstyles/introprofile.module.scss";
-import { FiSend } from "react-icons/fi";
-import { useRouter } from "next/navigation";
-
-export default function Introprofile() {
-  const router = useRouter();
+import styles from "../../intro/Introstyles/workwith.module.scss";
+export default function AboutWorkWith() {
   return (
-    <div className={styles.profile_div}>
+    <div className={styles.work_cont}>
       <div className={styles.first_div}>
-        <div className={styles.circle} />
-        <img
-          className={styles.image}
-          src="https://cdn-icons-png.flaticon.com/512/3532/3532814.png"
-          alt="logo"
-        />
+        <p>Work with</p>
+        <p>Muralidhar.. 🧑‍💻</p>
       </div>
-      <button className={styles.btn}>
-        Im Muralidhar
-        <FiSend className={styles.icon} />
-      </button>
       <div className={styles.second_div}>
-        <p className={styles.text}>Bio</p>
-        <span onClick={() => router.push("about")}>
+        <p className={styles.touch}>Get In Touch</p>
+        <span>
           <svg
             width="48"
             height="35"

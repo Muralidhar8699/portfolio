@@ -4,6 +4,7 @@ import styles from "../Introstyles/introabout.module.scss";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { IoMailOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 const parentVariant = {
   hidden: {
     opacity: 0,
@@ -34,6 +35,7 @@ const childVariants = {
   },
 };
 export default function IntroAbout() {
+  const router = useRouter();
   return (
     <div className={styles.about_cont}>
       <motion.div
@@ -60,6 +62,7 @@ export default function IntroAbout() {
         </motion.div>
       </motion.div>
       <motion.div
+        onClick={() =>router.push("about")}
         variants={parentVariant}
         initial="hidden"
         animate="visible"

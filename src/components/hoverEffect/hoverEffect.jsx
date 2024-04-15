@@ -1,12 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "./hover.module.scss";
+import { usePathname } from "next/navigation";
 
 export default function HoverEffect({ titles, className }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [active, setActive] = useState("Home");
+  const pathname = usePathname();
+  useEffect(() => {
+    const currentPath = pathname;
+    const activeTitle = titles.find((item) => item.path === currentPath)?.title;
+    setActive(activeTitle || null);
+  }, [pathname, titles]);
   return (
     <div className={styles.main_container}>
       {titles.map((item, idx) => (
@@ -15,7 +22,6 @@ export default function HoverEffect({ titles, className }) {
           key={item?.path}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
-          onClick={() => setActive(item.title)}
           className={styles.link}
         >
           <>

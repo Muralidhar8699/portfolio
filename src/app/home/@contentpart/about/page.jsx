@@ -1,28 +1,40 @@
 import React from "react";
 import styles from "./aboutStyles/aboutpage.module.scss";
+import AboutWorkWith from "./components/aboutworkwith";
+import IntroAbout from "../intro/components/introabout";
+import AboutPhoto from "./components/aboutphoto";
+import AboutDescription from "./components/description";
+import Education from "./components/education";
+import SocialLinks from "./components/sociallinks";
+import AboutProjects from "./components/aboutprojects";
+import AboutDo from "./components/aboutdoing";
 
 export default function AboutPage() {
   return (
     <div className={styles.about_cont}>
+      <div className={styles.grid5}>
+        <AboutDescription />
+      </div>
       <div className={styles.grid1}>
-        1<h1>photo</h1>
+        <AboutPhoto />
+      </div>
+      <div className={styles.grid6}>
+        <AboutProjects />
+      </div>
+      <div className={styles.grid8}>
+        <AboutDo />
+      </div>
+      <div className={styles.grid7}>
+        <SocialLinks />
       </div>
       <div className={styles.grid2}>
-        2<h1>profile</h1>
+        <IntroAbout />
       </div>
       <div className={styles.grid3}>
-        3<h1>Education</h1>
+        <Education />
       </div>
       <div className={styles.grid4}>
-        4<h1>Link to Contact</h1>
-      </div>
-      <div className={styles.grid5}>
-        5<h1>Description</h1>
-      </div>
-      <div className={styles.grid6}>6</div>
-      <div className={styles.grid7}>7</div>
-      <div className={styles.grid8}>
-        8<h1>What I Do</h1>
+        <AboutWorkWith />
       </div>
     </div>
   );

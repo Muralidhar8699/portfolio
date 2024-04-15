@@ -1,13 +1,16 @@
+"use client";
 import React from "react";
 import styles from "../Introstyles/workwith.module.scss";
+import { useRouter } from "next/navigation";
 export default function IntroWorkWith() {
+  const router = useRouter();
   return (
     <div className={styles.work_cont}>
       <div className={styles.first_div}>
         <p>Work with</p>
         <p>Muralidhar.. 🧑‍💻</p>
       </div>
-      <div className={styles.second_div}>
+      <div onClick={() => router.push("contact")} className={styles.second_div}>
         <p className={styles.touch}>Get In Touch</p>
         <span>
           <svg
