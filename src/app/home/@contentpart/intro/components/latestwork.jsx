@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import styles from "../Introstyles/latestwork.module.scss";
+import { useRouter } from "next/navigation";
 
 export default function IntroLatestwork() {
+  const router = useRouter();
   return (
     <div className={styles.main_cont}>
       <div className={styles.first_div}>
@@ -10,11 +13,14 @@ export default function IntroLatestwork() {
       </div>
       <div className={styles.second_div}>
         <img
-          src="https://softivuspro.com/wp/bentox/wp-content/uploads/2024/01/latest-work1.png"
+          src="https://cdn.dribbble.com/userupload/10358451/file/original-4316c3c91cb9c4577110b94ea4030fc1.png?resize=1504x1128"
           alt="logo"
         />
       </div>
-      <div className={styles.link_div}>
+      <div
+        onClick={() => router.push("projects/ogami")}
+        className={styles.link_div}
+      >
         <p className={styles.text}>All Projects</p>
         <span>
           <svg
