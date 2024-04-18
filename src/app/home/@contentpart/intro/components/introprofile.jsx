@@ -16,7 +16,7 @@ export default function Introprofile() {
         />
       </div>
       <button className={styles.btn}>
-        Im Muralidhar
+        I&#39;m Muralidhar
         <FiSend className={styles.icon} />
       </button>
       <div className={styles.second_div}>
