@@ -5,7 +5,10 @@ import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 export default function ContactLinks() {
   return (
     <div className={styles.main_cont}>
-      <a>
+      <a
+        href="https://github.com/Muralidhar8699?tab=repositories"
+        target="_blank"
+      >
         <div>
           <FaGithub className={styles.icon} />
         </div>
@@ -27,7 +30,7 @@ export default function ContactLinks() {
         <div>
           <FaWhatsapp className={styles.icon} />
         </div>
-        <p> What&#39;sapp</p>
+        <p>What&#39;sapp</p>
       </a>
     </div>
   );
