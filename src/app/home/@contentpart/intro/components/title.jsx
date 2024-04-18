@@ -42,11 +42,7 @@ export default function IntroTitle() {
         Title
       </motion.span>
       <motion.div variants={childVariants} className={styles.wrapper}>
-        <svg className={styles.svg}>
-          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-            MERN
-          </text>
-        </svg>
+        MERN
       </motion.div>
       <motion.span variants={childVariants} className={styles.fswd}>
         Full Stack Web Developer
