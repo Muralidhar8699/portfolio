@@ -10,7 +10,7 @@ import IntroAbout from "./components/introabout";
 import IntroServices from "./components/introservices";
 import IntroScroll from "./components/introscroll";
 import IntroResume from "./components/introresume";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, delay, motion, useInView } from "framer-motion";
 
 const IntroVariants = {
   hidden: {
@@ -27,6 +27,7 @@ const IntroVariants = {
       when: "beforeChildren",
       duration: 1,
       staggerChildren: 0.05,
+      delay:.5,
     },
   },
 };
@@ -52,6 +53,7 @@ export default function IntroPage() {
       variants={IntroVariants}
       initial="hidden"
       animate="visible"
+      exit={{ opacity: 0 }}
       className={styles.Intro_cont}
     >
       <motion.div
