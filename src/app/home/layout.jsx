@@ -23,7 +23,7 @@ export default function HomeLayout({ children, contentpart, navbar }) {
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1,  type: "spring" }}
+            transition={{ duration: 1, type: "spring" }}
             className={styles.child_cont}
           >
             {children}
