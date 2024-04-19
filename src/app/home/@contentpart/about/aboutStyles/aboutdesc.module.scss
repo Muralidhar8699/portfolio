@@ -5,8 +5,8 @@
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   @include flexBox(column, start, center);
   padding: 1rem 5rem;
   position: relative;
@@ -23,16 +23,16 @@
     width: 100%;
     height: 100%;
     z-index: 20;
-    background-color: #0c101d;
+    background-color: #12151e;
     pointer-events: none;
     border-radius: 1rem;
   }
-  .text1{
+  .text1 {
     position: relative;
     z-index: 20;
     color: #fff;
   }
-  .text2{
+  .text2 {
     position: relative;
     margin-top: 4rem;
     z-index: 20;

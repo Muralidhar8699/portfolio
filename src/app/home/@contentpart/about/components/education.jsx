@@ -8,8 +8,8 @@ export default function Education() {
   const x = useTransform(scrollY, [0, 300], [100, 0]);
   const scale = useTransform(scrollY, [0, 300], [0, 1]);
   return (
-    <motion.div style={{ x,scale }} className={styles.main_cont}>
+    <div style={{ x,scale }} className={styles.main_cont}>
       Education
-    </motion.div>
+    </div>
   );
 }

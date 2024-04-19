@@ -72,7 +72,7 @@ export default function IntroPage() {
         style={{
           transform: isInView ? "none" : "translateX(-100px)",
           opacity: isInView ? 1 : 0,
-          transition: " 0.8s",
+          transition: " 1.3s",
         }}
         className={styles.grid4}
       >
@@ -83,7 +83,7 @@ export default function IntroPage() {
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
-          transition: "1s",
+          transition: "1.5s",
         }}
         className={styles.grid5}
       >

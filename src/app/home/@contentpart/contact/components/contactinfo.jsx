@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "../contactStyles/contactinfo.module.scss";
-
+import { FaClipboardCheck } from "react-icons/fa";
+import { BsClipboard2PlusFill } from "react-icons/bs";
 export default function ContactInfo() {
+  const email = "muralidhar8699@gmail.com";
+  const [copy, setcopy] = useState(true);
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => console.log("copied"))
+      .catch(() => console.error("failed to copy"));
+  };
   return (
     <div className={styles.main_cont}>
       <div className={styles.first_div}>
@@ -28,7 +38,8 @@ export default function ContactInfo() {
             </svg>
           </a>
           <div>
-            <h3>Phone</h3>
+            <h3>Phone </h3>
+
             <p>9346053504</p>
           </div>
         </div>
@@ -58,8 +69,27 @@ export default function ContactInfo() {
             </svg>
           </a>
           <div>
-            <h3>Email</h3>
-            <p>muralidhar8699@gmail.com</p>
+            <div className={styles.copy_div}>
+              <h3>Email</h3>
+              {copy ? (
+                <BsClipboard2PlusFill
+                  onClick={() => {
+                    handleCopy();
+                    setcopy(!copy);
+                  }}
+                  className={styles.copy_icon}
+                /> 
+              ) : (
+                <FaClipboardCheck
+                  onClick={() => {
+                    handleCopy();
+                    setcopy(!copy);
+                  }}
+                  className={styles.copy_icon}
+                />
+              )}
+            </div>
+            <p>{email}</p>
           </div>
         </div>
         <div className={styles.div_3}>

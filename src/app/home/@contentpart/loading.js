@@ -9,8 +9,8 @@ export default function LoadingPage() {
         alignItems: "center",
         justifyContent: "start",
         position: "absolute",
-        top:"10%",
-        left:"22%"
+        top:"25%",
+        left:"25%"
       }}
     >
       <img
