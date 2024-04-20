@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import highlightStyle from "./highlight.module.css"
+import highlightStyle from "./highlight.module.scss"
 
 export default function Highlight({children}) {
   return (

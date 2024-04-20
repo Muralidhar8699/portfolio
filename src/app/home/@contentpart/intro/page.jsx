@@ -27,7 +27,7 @@ const IntroVariants = {
       when: "beforeChildren",
       duration: 1,
       staggerChildren: 0.05,
-      delay:.5,
+      delay: 0.5,
     },
   },
 };

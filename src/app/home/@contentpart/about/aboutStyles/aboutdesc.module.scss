@@ -8,12 +8,13 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   @include flexBox(column, start, center);
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   position: relative;
   z-index: 20;
   background-color: #02030f;
   overflow: hidden;
-  cursor: grab;
+  gap: 1.4rem;
+  cursor: pointer;
   .empty {
     position: absolute;
     top: 0;
@@ -31,11 +32,32 @@
     position: relative;
     z-index: 20;
     color: #fff;
+    pointer-events: none;
+    font-size: 2.3rem;
   }
   .text2 {
     position: relative;
-    margin-top: 4rem;
     z-index: 20;
     color: #fff;
+    font-size: 1.8rem;
+    pointer-events: none;
+    strong {
+      margin-top: 1rem;
+      color: $yellow;
+      font-size: 2rem;
+    }
+  }
+  .text3 {
+    position: relative;
+    z-index: 20;
+    @include semiBoldFont(1.1rem);
+    line-height: 1.3;
+    color: rgb(230, 228, 228);
+    pointer-events: none;
+    text-wrap: wrap;
+    // width: 42rem;
+    text-align: justify;
+    // text-align-last: justify;
+    word-spacing: 0.1em; 
   }
 }
