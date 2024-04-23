@@ -20,27 +20,27 @@
 }
 
 @mixin lightFont($fontSize) {
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
   font-weight: 300;
   font-size: $fontSize;
 }
 @mixin regularFont($fontSize) {
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: $fontSize;
 }
 @mixin mediumFont($fontSize) {
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: $fontSize;
 }
 @mixin semiBoldFont($fontSize) {
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: $fontSize;
 }
 @mixin boldFont($fontSize) {
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
   font-weight: 800;
   font-size: $fontSize;
 }
