@@ -45,3 +45,9 @@ a {
 *::-webkit-scrollbar-thumb:active {
   background-color: #fe7f01;
 }
+
+@media (max-width: 1023px) {
+  body {
+    display: none;
+  }
+}
