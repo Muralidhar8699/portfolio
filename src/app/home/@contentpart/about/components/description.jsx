@@ -19,11 +19,11 @@ export default function AboutDescription() {
         <strong>MERN Stack 🧑‍💻</strong>
       </h1>
       <p className={styles.text3}>
-        I'm a skilled software developer with experience in <H>JavaScript</H>, and
+        I&#39;m a skilled software developer with experience in <H>JavaScript</H>, and
         expertise in frameworks like <H>React</H>, <H>Node.js</H>, <H>Next.js</H>
-        , <H>Express.js</H> and <H>MongoDB</H>. I'm a quick learner and collaborate closely
+        , <H>Express.js</H> and <H>MongoDB</H>. I&#39;m a quick learner and collaborate closely
         with clients to create efficient, scalable, and user-friendly solutions
-        that solve real-world problems. Let's work together to bring your ideas
+        that solve real-world problems. Let&#39;s work together to bring your ideas
         to life!
       </p>
     </div>
