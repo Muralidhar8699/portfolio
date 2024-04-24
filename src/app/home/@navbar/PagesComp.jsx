@@ -28,12 +28,12 @@ export default function PagesComp() {
       <div className={styles.titles_div}>
         <HoverEffect titles={PathData} />
       </div>
-      <div className={styles.checkbox_54}>
+      {/* <div className={styles.checkbox_54}>
         <label className={styles.switch}>
           <input type="checkbox" />
           <span className={styles.slider}></span>
         </label>
-      </div>
+      </div> */}
     </section>
   );
 }
