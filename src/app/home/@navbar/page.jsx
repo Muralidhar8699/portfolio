@@ -5,6 +5,7 @@ import PagesComp from "./PagesComp";
 import LetstalkComp from "./letstalkComp";
 import Logo from "./logoComp";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Game from "./game";
 
 export default function NavbarPage() {
   const { scrollY } = useScroll();
@@ -14,6 +15,7 @@ export default function NavbarPage() {
     <motion.div style={{ y, opacity }} className={styles.navbar_div}>
       <Logo />
       <PagesComp />
+      <Game/>
       <LetstalkComp />
     </motion.div>
   );
