@@ -2,7 +2,6 @@
 @import "../../app/styles/mixins.scss";
 .main {
   width: 100%;
-  border: 1px solid;
   height: 100vh;
   @include flexBox(row, center, center);
   .loader {

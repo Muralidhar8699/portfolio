@@ -83,7 +83,7 @@
       height: 100%;
       display: flex;
       line-height: 30px;
-      animation: marquee 20s linear infinite;
+      animation: marquee 20s linear infinite forwards;
       gap: 1rem;
 
       & > :hover {
@@ -168,7 +168,7 @@
         height: 100%;
         display: flex;
         line-height: 30px;
-        animation: marquee 20s linear infinite;
+        animation: marquee 20s linear infinite ;
         gap: 1rem;
 
         & > :hover {

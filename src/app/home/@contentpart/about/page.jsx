@@ -11,31 +11,33 @@ import AboutDo from "./components/aboutdoing";
 
 export default function AboutPage() {
   return (
-    <div className={styles.about_cont}>
-      <div className={styles.grid5}>
-        <AboutDescription />
+    <>
+      <div className={styles.about_cont}>
+        <div className={styles.grid5}>
+          <AboutDescription />
+        </div>
+        <div className={styles.grid1}>
+          <AboutPhoto />
+        </div>
+        <div className={styles.grid6}>
+          <AboutProjects />
+        </div>
+        <div className={styles.grid8}>
+          <AboutDo />
+        </div>
+        <div className={styles.grid7}>
+          <SocialLinks />
+        </div>
+        <div className={styles.grid2}>
+          <IntroAbout />
+        </div>
+        <div className={styles.grid3}>
+          <Education />
+        </div>
+        <div className={styles.grid4}>
+          <AboutWorkWith />
+        </div>
       </div>
-      <div className={styles.grid1}>
-        <AboutPhoto />
-      </div>
-      <div className={styles.grid6}>
-        <AboutProjects />
-      </div>
-      <div className={styles.grid8}>
-        <AboutDo />
-      </div>
-      <div className={styles.grid7}>
-        <SocialLinks />
-      </div>
-      <div className={styles.grid2}>
-        <IntroAbout />
-      </div>
-      <div className={styles.grid3}>
-        <Education />
-      </div>
-      <div className={styles.grid4}>
-        <AboutWorkWith />
-      </div>
-    </div>
+    </>
   );
 }

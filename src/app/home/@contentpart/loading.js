@@ -1,22 +1,14 @@
 import React from "react";
+import "../../../components/loading/loading.scss";
 
 export default function LoadingPage() {
   return (
-    <div
-      style={{
-        width: "50rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "start",
-        position: "absolute",
-        top:"25%",
-        left:"25%"
-      }}
-    >
-      <img
-        src="https://res.cloudinary.com/dw74xtlxl/image/upload/v1713446164/p5dije9komrbqxaryfvl.gif"
-        alt="logo"
-      />
+    <div className="main" style={{ position: "absolute", top: 0 ,scale:2,backgroundColor:"rgba(203, 198, 198, 0.361)"}}>
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+        </svg>
+      </div>
     </div>
   );
 }

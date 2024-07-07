@@ -53,8 +53,24 @@ const backendImgs = [
     name: "mongodb",
   },
   {
-    link: "https://res.cloudinary.com/dw74xtlxl/image/upload/v1714028420/ovowyhulryyesnzl7msw.png",
-    name: "express",
+    link: "https://res.cloudinary.com/cliqtick/image/upload/v1713332230/png-clipart-github-repository-computer-icons-logo-github-blue-git_clqsdy.png",
+    name: "github",
+  },
+  {
+    link: "https://res.cloudinary.com/dw74xtlxl/image/upload/v1714028652/hgmgd9wdeegl1fu75iow.png",
+    name: "git",
+  },
+  {
+    link: "https://res.cloudinary.com/dw74xtlxl/image/upload/v1714027691/xwa7yuikm0diqenwvwdn.jpg",
+    name: "mongodb",
+  },
+  {
+    link: "https://res.cloudinary.com/cliqtick/image/upload/v1713332230/png-clipart-github-repository-computer-icons-logo-github-blue-git_clqsdy.png",
+    name: "github",
+  },
+  {
+    link: "https://res.cloudinary.com/dw74xtlxl/image/upload/v1714028652/hgmgd9wdeegl1fu75iow.png",
+    name: "git",
   },
 ];
 const ToolsImgs = [
@@ -66,6 +82,7 @@ const ToolsImgs = [
     link: "https://res.cloudinary.com/dw74xtlxl/image/upload/v1714028652/hgmgd9wdeegl1fu75iow.png",
     name: "git",
   },
+  
 ];
 export default function IntroResume() {
   return (
