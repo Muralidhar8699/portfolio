@@ -49,7 +49,7 @@ export default function Game() {
   };
 
   useEffect(() => {
-    if (flippedCards.length === 16) {
+    if (flippedCards.length === 2) {
       const [firstIndex, secondIndex] = flippedCards;
       if (cards[firstIndex].content === cards[secondIndex].content) {
         setMatchedCards([...matchedCards, firstIndex, secondIndex]);
@@ -57,7 +57,7 @@ export default function Game() {
       setTimeout(() => setFlippedCards([]), 1500);
       setMoves(moves + 1);
     }
-    if (matchedCards.length === 2) {
+    if (matchedCards.length === 16) {
       message.success(
         <p style={{ width: "15rem", fontSize: "1.3rem" }}>You Won 🥳🍾</p>
       );
