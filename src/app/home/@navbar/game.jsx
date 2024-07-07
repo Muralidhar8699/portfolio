@@ -49,7 +49,7 @@ export default function Game() {
   };
 
   useEffect(() => {
-    if (flippedCards.length === 2) {
+    if (flippedCards.length === 16) {
       const [firstIndex, secondIndex] = flippedCards;
       if (cards[firstIndex].content === cards[secondIndex].content) {
         setMatchedCards([...matchedCards, firstIndex, secondIndex]);
