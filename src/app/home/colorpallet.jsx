@@ -16,11 +16,11 @@ export default function ColorPallet() {
     setIsModalOpen(false);
   };
 
-//   useEffect(() => {
-//     if (selectedColor) {
-//       document.documentElement.style.setProperty("--yellow", selectedColor);
-//     }
-//   }, [selectedColor]);
+  //   useEffect(() => {
+  //     if (selectedColor) {
+  //       document.documentElement.style.setProperty("--yellow", selectedColor);
+  //     }
+  //   }, [selectedColor]);
   return (
     <>
       <div
@@ -35,8 +35,9 @@ export default function ColorPallet() {
         footer={null}
       >
         <div>
-          {colors.map((e) => (
+          {colors.map((e, i) => (
             <div
+              key={i}
               onClick={() => handleColorClick(e)}
               style={{ backgroundColor: e }}
             >
