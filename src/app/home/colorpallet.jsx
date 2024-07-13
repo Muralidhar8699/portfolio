@@ -16,11 +16,11 @@ export default function ColorPallet() {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    if (selectedColor) {
-      document.documentElement.style.setProperty("--yellow", selectedColor);
-    }
-  }, [selectedColor]);
+//   useEffect(() => {
+//     if (selectedColor) {
+//       document.documentElement.style.setProperty("--yellow", selectedColor);
+//     }
+//   }, [selectedColor]);
   return (
     <>
       <div
