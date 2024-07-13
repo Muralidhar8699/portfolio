@@ -8,6 +8,7 @@
     rgb(241, 241, 242) 0.1%,
     rgb(224, 226, 228) 100.2%
   );
+  position: relative;
   .nav_cont {
     width: 90%;
     @include flexBox(row, center, center);
@@ -22,5 +23,10 @@
     border-radius: 2rem;
     @include flexBox(row, center, center);
     height: 65rem;
+  }
+  .color_pallet {
+    position: fixed;
+    bottom: 2%;
+    right: .8%;
   }
 }

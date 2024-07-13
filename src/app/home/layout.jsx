@@ -4,6 +4,7 @@ import styles from "./home.module.scss";
 import { useEffect, useState } from "react";
 import LoadingScreen from "@/components/loading/loading";
 import { AnimatePresence, motion } from "framer-motion";
+import ColorPallet from "./colorpallet";
 
 export default function HomeLayout({ children, contentpart, navbar }) {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,9 @@ export default function HomeLayout({ children, contentpart, navbar }) {
             {children}
             <div className={styles.nav_cont}>{navbar}</div>
             <div className={styles.content_cont}>{contentpart}</div>
+            <div className={styles.color_pallet}>
+              <ColorPallet />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -45,24 +45,24 @@ export default function IntroAbout() {
         className={styles.first_div}
       >
         <motion.div variants={childVariants} className={styles.linkedin_div}>
-          <img
+          {/* <img
             src="https://softivuspro.com/wp/bentox/wp-content/themes/bentoxlight/assets/images/global/social-hover.png"
             alt="logo"
             className={styles.img1}
-          />
+          /> */}
           <SlSocialLinkedin className={styles.linkedin_logo} />
         </motion.div>
         <motion.div variants={childVariants} className={styles.mail_div}>
-          <img
+          {/* <img
             src="https://softivuspro.com/wp/bentox/wp-content/themes/bentoxlight/assets/images/global/social-hover.png"
             alt="logo"
             className={styles.img2}
-          />
+          /> */}
           <IoMailOutline className={styles.email_logo} />
         </motion.div>
       </motion.div>
       <motion.div
-        onClick={() =>router.push("about")}
+        onClick={() => router.push("about")}
         variants={parentVariant}
         initial="hidden"
         animate="visible"
